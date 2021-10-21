@@ -1,0 +1,37 @@
+.card {
+  position: relative;
+  background-color: #f2f2f2;
+  min-height: 10.3125rem;
+  padding-top: clamp(5.5rem, 8vw, 7.25rem);
+  padding-bottom: clamp(1.375rem, 2vw, 1.875rem);
+  border-radius: 0.5rem;
+  flex-basis: 100%;
+  &__img {
+    position: absolute;
+    width: 13.5rem;
+    inset: 0 0 0 50%;
+    transform: translate(-50%, -40%);
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
+  &__textBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0625rem;
+    text-align: center;
+    align-items: center;
+    color: initial;
+    transition: transform 0.5s ease-out;
+  }
+  &__h6 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.06688rem;
+  }
+  &:hover &__img {
+    transform: scale(1.15) translate(-45%, -40%);
+  }
+  &:hover &__textBlock {
+    transform: scale(1.05);
+  }
+}

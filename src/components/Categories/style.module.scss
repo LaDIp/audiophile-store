@@ -1,0 +1,14 @@
+.categories {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.875rem;
+  margin-bottom: 10.5rem;
+  margin-top: 12.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+    gap: 10rem;
+  }
+}

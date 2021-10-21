@@ -1,12 +1,19 @@
 import React from 'react'
-import { Categories, Featured, Header, About, Footer } from './components'
+import {
+  Categories,
+  Featured,
+  Header,
+  About,
+  Footer,
+  Products,
+} from './components'
 import { Home } from './pages'
 
 function App() {
   return (
     <>
       <Header />
-      <Home />
+      <Products />
       <Categories />
       <Featured />
       <About />

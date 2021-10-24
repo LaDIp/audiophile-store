@@ -26,7 +26,7 @@ const cartReducer = (state = defaultState, action: CartAction): cartState => {
           ...state.products,
           {
             product: action.payload.product,
-            count: 1,
+            count: action.payload.count,
           },
         ],
       }

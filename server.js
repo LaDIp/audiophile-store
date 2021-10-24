@@ -7,8 +7,15 @@ const middlewares = jsonServer.defaults({
   static: path.join(__dirname, 'server'),
 })
 
+const PORT = process.env.PORT || 8000
+
 server.use(middlewares)
+server.use(
+  jsonServer.rewriter({
+    '/api/*': '/$1',
+  })
+)
 server.use(router)
-server.listen(8000, () => {
+server.listen(PORT, () => {
   console.log('JSON Server is running')
 })

@@ -48,7 +48,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .footer {
     background-color: #191919;
     &__container {

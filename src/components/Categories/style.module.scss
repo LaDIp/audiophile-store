@@ -6,7 +6,7 @@
   margin-top: 4.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .categories {
     flex-direction: column;
     gap: 10rem;

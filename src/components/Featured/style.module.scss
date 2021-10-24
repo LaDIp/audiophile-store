@@ -68,7 +68,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .featured {
     &__textBlock {
       width: 100%;
@@ -100,7 +100,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   .featured {
     &__h2 {
       font-size: 2rem;

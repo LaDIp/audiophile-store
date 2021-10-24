@@ -27,7 +27,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .hero {
     text-align: center;
     * {
@@ -47,7 +47,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   .hero {
     &__h1 {
       font-size: 2em;

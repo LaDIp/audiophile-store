@@ -45,7 +45,7 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
   .product {
     &:nth-child(even) {
       .product__text {
@@ -59,7 +59,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .product {
     flex-direction: column;
     &__img {
@@ -75,7 +75,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   .products {
     &__header {
       padding: 2rem;

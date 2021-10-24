@@ -14,7 +14,7 @@ function App() {
   const [data, setData] = React.useState<Array<Product>>()
 
   React.useEffect(() => {
-    fetch('http://192.168.0.105:3001/products')
+    fetch('https://audiophile-store.herokuapp.com:8000/products')
       .then(res => res.json())
       .then(data => {
         setData(data)

@@ -1,12 +1,13 @@
 import React from 'react'
-import logo from '../../assets/shared/desktop/logo.svg'
-import facebook from '../../assets/shared/desktop/icon-facebook.svg'
-import twitter from '../../assets/shared/desktop/icon-twitter.svg'
-import instagram from '../../assets/shared/desktop/icon-instagram.svg'
+import logo from '../../assets/logo.svg'
+import facebook from '../../assets/icon-facebook.svg'
+import twitter from '../../assets/icon-twitter.svg'
+import instagram from '../../assets/icon-instagram.svg'
 
 import style from './style.module.scss'
 import classNames from 'classnames'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import { links } from '../../utils/constants'
 
 function Footer() {
   return (
@@ -15,28 +16,13 @@ function Footer() {
         <div className={classNames(style.footer__nav)}>
           <img src={logo} alt='audiophole' className='footer__logo' />
           <ul className={classNames(style.footer__navList, 'navList')}>
-            <li>
-              <Link
-                to='./index.html'
-                className='navList__link navList__link--current-page'>
-                home
-              </Link>
-            </li>
-            <li>
-              <Link to='./headphones.html' className='navList__link'>
-                headphones
-              </Link>
-            </li>
-            <li>
-              <Link to='./speakers.html' className='navList__link'>
-                speakers
-              </Link>
-            </li>
-            <li>
-              <Link to='./earphones.html' className='navList__link'>
-                earphones
-              </Link>
-            </li>
+            {links.map(link => (
+              <li key={link.id}>
+                <NavLink className='navList__link' to={link.url}>
+                  {link.text}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
         <div className={classNames(style.footer__info)}>

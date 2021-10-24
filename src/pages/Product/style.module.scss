@@ -1,0 +1,143 @@
+.product {
+  padding: 2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  & p {
+    font-weight: 200;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+  &__img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  &__text {
+    padding-left: 6rem;
+    order: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & p,
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__features {
+    margin: 5em auto;
+    & * {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__include {
+    width: 100%;
+    display: flex;
+  }
+  &__gallery {
+    margin: 3rem auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  &__gallery_3 {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+  }
+  &__galleryImage {
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__price {
+    font-weight: 700 !important;
+    font-size: 1.5rem;
+  }
+}
+
+.include {
+  &__h2 {
+    width: 70%;
+  }
+  &__list {
+    width: 30%;
+  }
+  &__item {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.suggestions {
+  width: 100%;
+  &__h2 {
+    width: 100%;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    gap: 1.875rem;
+    & * {
+      margin: 1em auto;
+      text-align: center;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    &__content {
+      flex-direction: column;
+    }
+    &__img {
+      width: 100%;
+    }
+    &__text {
+      text-align: center;
+      padding-left: 0;
+      align-items: center;
+      & p,
+      h2 {
+        margin: 1.5rem auto;
+      }
+    }
+    &__include {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__features {
+      margin: 2em auto;
+    }
+    &__gallery {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .include {
+      &__h2 {
+        text-align: center;
+        width: 100%;
+      }
+      &__list {
+        margin: 1em auto;
+        width: auto;
+      }
+    }
+  }
+  .suggestions {
+    &__list {
+      flex-direction: column;
+    }
+  }
+}

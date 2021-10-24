@@ -1,5 +1,9 @@
 .header {
+  width: 100%;
+  height: 10vh;
+  position: fixed !important;
   background-color: #191919;
+  z-index: 1;
   &__navList {
     width: 60%;
     background-color: #191919;
@@ -10,9 +14,14 @@
     background-color: inherit;
     border: none;
   }
+  &::after {
+    position: static;
+    content: '';
+  }
 }
 
 .nav {
+  height: 100%;
   position: relative;
   padding: 2rem 0;
   display: flex;

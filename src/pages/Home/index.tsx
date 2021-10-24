@@ -6,7 +6,7 @@ import desktopImage from '../../assets//home/desktop/image-hero.jpg'
 import classNames from 'classnames'
 import { Link } from 'react-router-dom'
 
-function Hero() {
+function Home() {
   const width = window.innerWidth
   return (
     <section className={style.hero}>
@@ -40,4 +40,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default Home

@@ -1,0 +1,86 @@
+.cart {
+  position: relative;
+  &__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  &__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 0.9rem;
+    color: white;
+    background: red;
+    border: 4px solid #191919;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+.modal {
+  padding: 1em;
+  width: 60%;
+  position: absolute;
+  right: 0;
+  top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  z-index: 1;
+  &__p {
+    width: 50%;
+  }
+  &__list {
+    width: 100%;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & img {
+      width: 20%;
+    }
+  }
+  &__remove {
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__checkout {
+    width: 100% !important;
+  }
+  &__total {
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__delete {
+    width: auto;
+    height: auto;
+    border: none;
+    background: none;
+    color: rgba(255, 0, 0, 0.5);
+    font-size: 3rem;
+    transform: rotate(45deg);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 100%;
+  }
+}

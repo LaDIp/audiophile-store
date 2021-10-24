@@ -1,0 +1,19 @@
+.counter {
+  display: flex;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  background-color: #f2f2f2;
+  & button {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    border: none;
+    color: #d97e4a;
+    font-weight: 900;
+    cursor: pointer;
+    &:disabled {
+      color: black;
+    }
+  }
+}

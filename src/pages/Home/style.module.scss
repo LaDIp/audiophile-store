@@ -31,7 +31,8 @@
   .hero {
     text-align: center;
     * {
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
     }
     &__content {
       align-items: center;
@@ -42,7 +43,6 @@
     }
     &__h1 {
       font-size: 2.6em;
-      letter-spacing: 0;
     }
   }
 }
@@ -51,7 +51,6 @@
   .hero {
     &__h1 {
       font-size: 2em;
-      letter-spacing: 0;
     }
   }
 }

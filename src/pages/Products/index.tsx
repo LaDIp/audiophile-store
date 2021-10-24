@@ -1,26 +1,31 @@
 import React from 'react'
 import style from './style.module.scss'
-import data from '../../data/headphones'
 import classNames from 'classnames'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router'
 
-function Produts() {
+type ProductsProps = {
+  data: Array<Product>
+}
+
+function Products({ data }: ProductsProps) {
+  const { type } = useParams<any>()
+  const products = data.filter(item => item.category === type)
   const width = window.innerWidth
   return (
     <section className={style.products}>
-      <h4 className={style.products__header}>Headphones</h4>
+      <h4 className={style.products__header}>{type}</h4>
       <ul className={classNames(style.products__list, 'container')}>
-        {data.map((item, index) => {
+        {products.map((item, index) => {
           const {
-            img: { mobile, tablet, desktop },
+            image: { mobile, tablet, desktop },
             new_label,
             name,
-            text,
+            description,
             id,
           } = item
           return (
-            <li className={classNames(style.product)}>
-              {/* `${width >= 1280 && id % 2 === 0 ? 'reverse' : ''}` */}
+            <li key={id} className={classNames(style.product)}>
               <picture className={classNames(style.product__content)}>
                 <source media='(max-width: 375px)' srcSet={mobile} />
                 <source media='(max-width: 768px)' srcSet={tablet} />
@@ -41,7 +46,7 @@ function Produts() {
                   ''
                 )}
                 <h4>{name}</h4>
-                <p>{text}</p>
+                <p>{description}</p>
                 <Link to={`/product/${id}`} className='btn btn_peach'>
                   see product
                 </Link>
@@ -54,4 +59,4 @@ function Produts() {
   )
 }
 
-export default Produts
+export default Products

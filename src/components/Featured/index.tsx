@@ -9,7 +9,7 @@ import speaker_zx7_desktop from '../../assets/home/desktop/image-speaker-zx7.jpg
 import earphones_mobile from '../../assets/home/mobile/image-earphones-yx1.jpg'
 import earphones_tablet from '../../assets/home/tablet/image-earphones-yx1.jpg'
 import earphones_desktop from '../../assets/home/desktop/image-earphones-yx1.jpg'
-import circles from '../../assets/home/desktop/pattern-circles.svg'
+import circles from '../../assets/pattern-circles.svg'
 import classNames from 'classnames'
 import { Link } from 'react-router-dom'
 
@@ -37,7 +37,7 @@ function Featured() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <Link to='/' className='btn btn_black'>
+          <Link to='/product/5' className='btn btn_black'>
             see product
           </Link>
         </div>
@@ -60,7 +60,7 @@ function Featured() {
             style.featured__textBlock_medium
           )}>
           <h4>zx7 speaker</h4>
-          <Link to='/' className='btn btn_transparent'>
+          <Link to='/product/6' className='btn btn_transparent'>
             see product
           </Link>
         </div>
@@ -93,7 +93,7 @@ function Featured() {
               style.featured__textBlock_small
             )}>
             <h4>yx1 earphones</h4>
-            <Link to='/' className='btn btn_transparent'>
+            <Link to='/product/1' className='btn btn_transparent'>
               see product
             </Link>
           </div>

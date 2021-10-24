@@ -1,5 +1,5 @@
 # Audiophile
-Link: [MemoryGame](https://LaDIp.github.io/memory-game)
-![](https://github.com/LaDIp/LaDIp.github.io/blob/master/audiophile.gif)
+Link: [Audiophile](https://LaDIp.github.io/audiophile-store)
+![](https://github.com/LaDIp/audiophile-store/blob/master/audiophile.gif)
 
 

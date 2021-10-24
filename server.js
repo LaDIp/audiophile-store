@@ -4,7 +4,7 @@ const server = jsonServer.create()
 const router = jsonServer.router(path.join(__dirname, 'db.json'))
 const middlewares = jsonServer.defaults({
   logger: true,
-  static: path.join(__dirname, 'server'),
+  static: path.join(__dirname, 'build'),
 })
 
 const PORT = process.env.PORT || 8000
